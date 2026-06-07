@@ -27,28 +27,31 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       if (response.ok) {
-  if (typeof gtag === "function") {
-    gtag("event", "generate_lead", {
-      event_category: "form",
-      event_label: "Wedding Solutions Contact Form",
-      event_callback: function () {
-        window.location.assign("/thank-you.html");
-      },
-      event_timeout: 2000
-    });
+        if (typeof gtag === "function") {
+          gtag("event", "generate_lead", {
+            event_category: "form",
+            event_label: "Wedding Solutions Contact Form"
+          });
+        }
 
-    setTimeout(function () {
-      window.location.assign("/thank-you.html");
-    }, 2200);
-  } else {
-}
+        window.setTimeout(function () {
+          window.location.href = "/thank-you.html";
+        }, 1200);
+      } else {
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.textContent = "Send Inquiry";
+        }
 
-  if (submitButton) {
-    submitButton.disabled = false;
-    submitButton.textContent = "Send Inquiry";
-  }
+        alert("There was a problem sending your inquiry. Please check your information and try again.");
+      }
+    } catch (error) {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = "Send Inquiry";
+      }
 
-  alert("There was a problem sending your inquiry. Please check your information and try again.");
+      alert("There was a connection problem. Please try again.");
     }
   });
 });
