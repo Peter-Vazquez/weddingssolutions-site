@@ -990,3 +990,36 @@ h3 {
 .resource-card h3 {
   margin-bottom: 22px;
 }
+
+.faq-section {
+  padding: 88px 0;
+  background: var(--white);
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.faq-item {
+  background: var(--ivory);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 14px 30px rgba(31, 31, 31, 0.05);
+}
+
+.faq-item h3 {
+  font-size: 1.35rem;
+}
+
+.faq-item p {
+  color: var(--muted);
+}
+
+@media (max-width: 750px) {
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+}
