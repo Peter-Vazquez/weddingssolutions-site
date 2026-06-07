@@ -27,8 +27,17 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       if (response.ok) {
-        window.location.assign("/thank-you.html");
-      } else {
+  if (typeof gtag === "function") {
+    gtag("event", "generate_lead", {
+      event_category: "form",
+      event_label: "Wedding Solutions Contact Form"
+    });
+  }
+
+  setTimeout(function () {
+    window.location.assign("/thank-you.html");
+  }, 500);
+} else {
         if (submitButton) {
           submitButton.disabled = false;
           submitButton.textContent = "Send Inquiry";
