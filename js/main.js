@@ -38,20 +38,12 @@ document.addEventListener("DOMContentLoaded", function () {
     window.location.assign("/thank-you.html");
   }, 500);
 } else {
-        if (submitButton) {
-          submitButton.disabled = false;
-          submitButton.textContent = "Send Inquiry";
-        }
+  if (submitButton) {
+    submitButton.disabled = false;
+    submitButton.textContent = "Send Inquiry";
+  }
 
-        alert("There was a problem sending your inquiry. Please check your information and try again.");
-      }
-    } catch (error) {
-      if (submitButton) {
-        submitButton.disabled = false;
-        submitButton.textContent = "Send Inquiry";
-      }
-
-      alert("There was a connection problem. Please try again.");
+  alert("There was a problem sending your inquiry. Please check your information and try again.");
     }
   });
 });
