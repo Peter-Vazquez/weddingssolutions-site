@@ -30,14 +30,21 @@ document.addEventListener("DOMContentLoaded", function () {
   if (typeof gtag === "function") {
     gtag("event", "generate_lead", {
       event_category: "form",
-      event_label: "Wedding Solutions Contact Form"
+      event_label: "Wedding Solutions Contact Form",
+      event_callback: function () {
+        window.location.assign("/thank-you.html");
+      },
+      event_timeout: 2000
     });
-  }
 
-  setTimeout(function () {
+    setTimeout(function () {
+      window.location.assign("/thank-you.html");
+    }, 2200);
+  } else {
     window.location.assign("/thank-you.html");
-  }, 500);
-} else {
+  }
+}
+
   if (submitButton) {
     submitButton.disabled = false;
     submitButton.textContent = "Send Inquiry";
