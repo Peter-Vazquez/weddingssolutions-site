@@ -41,8 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.assign("/thank-you.html");
     }, 2200);
   } else {
-    window.location.assign("/thank-you.html");
-  }
 }
 
   if (submitButton) {
