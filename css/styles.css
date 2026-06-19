@@ -1230,3 +1230,58 @@ textarea:focus-visible {
     padding: 16px;
   }
 }
+
+/* Homepage spacing refinement */
+
+.home .hero-section {
+  min-height: 560px;
+  padding: 72px 0;
+}
+
+.home .intro-section,
+.home .services-preview,
+.home .why-section,
+.home .license-guide-feature,
+.home .service-area-section,
+.home .cta-section {
+  padding: 68px 0;
+}
+
+.home .section-heading {
+  margin-bottom: 32px;
+}
+
+.home .card-grid {
+  margin-bottom: 28px;
+}
+
+.home .service-card {
+  padding: 24px;
+}
+
+.home .license-guide-feature .button {
+  margin-top: 12px;
+}
+
+.home .cta-section h2 {
+  margin-bottom: 12px;
+}
+
+.home .cta-section p {
+  margin-bottom: 24px;
+}
+
+@media (max-width: 700px) {
+  .home .hero-section {
+    padding: 64px 0;
+  }
+
+  .home .intro-section,
+  .home .services-preview,
+  .home .why-section,
+  .home .license-guide-feature,
+  .home .service-area-section,
+  .home .cta-section {
+    padding: 52px 0;
+  }
+}
