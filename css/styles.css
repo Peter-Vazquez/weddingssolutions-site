@@ -1023,3 +1023,210 @@ h3 {
     grid-template-columns: 1fr;
   }
 }
+
+/* Mobile and accessibility polish */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.button,
+.nav-button,
+.footer-button,
+.form-button {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  min-height: 46px;
+}
+
+@media (max-width: 700px) {
+  .container {
+    width: min(100% - 32px, 1120px);
+  }
+
+  .site-header {
+    position: static;
+  }
+
+  .header-inner {
+    min-height: auto;
+    gap: 18px;
+  }
+
+  .brand-name {
+    font-size: 1.45rem;
+  }
+
+  .brand-tagline {
+    font-size: 0.86rem;
+  }
+
+  .main-nav {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .main-nav a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 42px;
+    padding: 6px 0;
+  }
+
+  .main-nav .nav-button {
+    padding: 10px 16px;
+  }
+
+  .hero-section {
+    min-height: auto;
+    padding: 84px 0;
+  }
+
+  .page-hero {
+    padding: 72px 0 56px;
+  }
+
+  .intro-section,
+  .services-preview,
+  .why-section,
+  .service-area-section,
+  .cta-section,
+  .pricing-section,
+  .addon-section,
+  .faq-section,
+  .style-intro-section,
+  .ceremony-style-section,
+  .process-section,
+  .about-story-section,
+  .values-section,
+  .background-section,
+  .contact-section,
+  .contact-next-section,
+  .guide-section,
+  .license-guide-feature {
+    padding: 64px 0;
+  }
+
+  h1 {
+    font-size: clamp(2.25rem, 12vw, 3.2rem);
+  }
+
+  h2 {
+    font-size: clamp(1.85rem, 9vw, 2.45rem);
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  .hero-text,
+  .intro-section p,
+  .section-heading p,
+  .service-area-section p,
+  .cta-section p,
+  .license-note-section p,
+  .guide-content p,
+  .contact-info p {
+    font-size: 1rem;
+  }
+
+  .service-card,
+  .pricing-card,
+  .style-card,
+  .process-card,
+  .value-card,
+  .resource-card,
+  .faq-item,
+  .contact-form-card,
+  .guide-content,
+  .sidebar-card,
+  .about-highlight-box,
+  .background-list-box {
+    padding: 24px;
+    border-radius: 16px;
+  }
+
+  .contact-form-card {
+    padding: 24px;
+  }
+
+  .form-button {
+    width: 100%;
+  }
+
+  .button-row {
+    width: 100%;
+  }
+
+  .button-row .button {
+    width: 100%;
+  }
+
+  .footer-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-inner {
+    gap: 28px;
+  }
+}
+
+@media (max-width: 420px) {
+  .container {
+    width: min(100% - 24px, 1120px);
+  }
+
+  .brand-name {
+    font-size: 1.32rem;
+  }
+
+  .brand-tagline {
+    font-size: 0.82rem;
+  }
+
+  .main-nav {
+    font-size: 0.9rem;
+  }
+
+  .service-card,
+  .pricing-card,
+  .style-card,
+  .process-card,
+  .value-card,
+  .resource-card,
+  .faq-item,
+  .contact-form-card,
+  .guide-content,
+  .sidebar-card {
+    padding: 20px;
+  }
+
+  .addon-row {
+    padding: 16px;
+  }
+
+  .guide-row {
+    padding: 16px;
+  }
+}
