@@ -30,5 +30,9 @@
     <loc>https://weddingssolutions.com/marriage-license-guide.html</loc>
     <priority>0.75</priority>
   </url>
+
+  <url>
+  	<loc>https://weddingssolutions.com/helpful-links.html</loc>
+  </url>
 	
 </urlset>
