@@ -1357,3 +1357,57 @@ textarea:focus-visible {
     width: 100%;
   }
 }
+
+/* Header spacing refinement after rebrand */
+
+.brand {
+  flex-shrink: 0;
+}
+
+.brand-name {
+  font-size: clamp(1.35rem, 2vw, 1.7rem);
+  line-height: 1.1;
+}
+
+.brand-tagline {
+  font-size: 0.86rem;
+}
+
+.main-nav {
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.main-nav a {
+  white-space: nowrap;
+}
+
+@media (max-width: 1050px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 18px 0;
+    gap: 14px;
+  }
+
+  .main-nav {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 14px;
+  }
+}
+
+@media (max-width: 700px) {
+  .brand-name {
+    font-size: 1.35rem;
+  }
+
+  .brand-tagline {
+    font-size: 0.82rem;
+  }
+
+  .main-nav {
+    gap: 10px 14px;
+  }
+}
