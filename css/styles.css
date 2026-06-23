@@ -1411,3 +1411,61 @@ textarea:focus-visible {
     gap: 10px 14px;
   }
 }
+
+/* Footer spacing refinement after rebrand */
+
+.footer-inner {
+  grid-template-columns: 1.4fr 0.8fr 1fr;
+  gap: 42px;
+  align-items: start;
+}
+
+.footer-about {
+  min-width: 0;
+}
+
+.footer-brand {
+  line-height: 1.15;
+}
+
+.footer-links {
+  min-width: 150px;
+}
+
+.footer-links a {
+  display: block;
+  line-height: 1.35;
+  margin-bottom: 9px;
+}
+
+.footer-contact {
+  min-width: 0;
+}
+
+.footer-button {
+  white-space: normal;
+  text-align: center;
+  line-height: 1.25;
+  padding: 12px 18px;
+}
+
+@media (max-width: 900px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-links {
+    min-width: 0;
+  }
+
+  .footer-button {
+    width: fit-content;
+  }
+}
+
+@media (max-width: 650px) {
+  .footer-button {
+    width: 100%;
+  }
+}
