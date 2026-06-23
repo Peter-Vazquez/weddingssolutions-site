@@ -1469,3 +1469,79 @@ textarea:focus-visible {
     width: 100%;
   }
 }
+
+/* Final two-tier header layout after rebrand */
+
+.site-header {
+  background: var(--ivory);
+}
+
+.header-inner {
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 18px 0 14px;
+}
+
+.brand {
+  text-align: center;
+  width: 100%;
+}
+
+.brand-name {
+  display: block;
+  font-size: clamp(1.65rem, 2.7vw, 2.15rem);
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+}
+
+.brand-tagline {
+  margin-top: 4px;
+  font-size: 0.92rem;
+}
+
+.main-nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 22px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+
+.main-nav a {
+  white-space: nowrap;
+}
+
+.main-nav .nav-button {
+  padding: 9px 18px;
+}
+
+@media (max-width: 760px) {
+  .header-inner {
+    align-items: flex-start;
+    padding: 16px 0;
+  }
+
+  .brand {
+    text-align: left;
+  }
+
+  .brand-name {
+    font-size: 1.45rem;
+  }
+
+  .brand-tagline {
+    font-size: 0.84rem;
+  }
+
+  .main-nav {
+    justify-content: flex-start;
+    gap: 10px 14px;
+  }
+}
