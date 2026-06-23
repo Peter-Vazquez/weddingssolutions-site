@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (typeof gtag === "function") {
           gtag("event", "generate_lead", {
             event_category: "form",
-            event_label: "Wedding Solutions Contact Form"
+            event_label: "Next Steps Wedding Solutions Contact Form"
           });
         }
 
