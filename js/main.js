@@ -27,9 +27,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
       .booking-choice-grid {
         display: grid;
-        grid-template-columns: minmax(0, 1.15fr) minmax(340px, 0.85fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 28px;
-        align-items: start;
+        align-items: stretch;
       }
 
       .booking-card {
@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
         border-radius: 24px;
         box-shadow: 0 18px 42px rgba(31, 31, 31, 0.07);
         padding: clamp(26px, 3vw, 38px);
+        height: 100%;
       }
 
       .booking-card p {
