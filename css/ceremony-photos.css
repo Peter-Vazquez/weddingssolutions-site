@@ -1,5 +1,5 @@
 /* Ceremony photo background system
-   Uses subtle image layers so photos add warmth without hurting readability. */
+   Uses image layers for atmosphere while keeping text readable. */
 
 .photo-bg {
   position: relative;
@@ -25,16 +25,16 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.18;
-  filter: grayscale(18%) contrast(96%) saturate(85%);
+  opacity: 0.42;
+  filter: grayscale(8%) contrast(103%) saturate(105%);
   transform: scale(1.02);
 }
 
 .photo-bg::after {
   z-index: 1;
   background:
-    linear-gradient(90deg, rgba(248, 244, 236, 0.96), rgba(248, 244, 236, 0.78), rgba(248, 244, 236, 0.96)),
-    radial-gradient(circle at center, rgba(255, 255, 255, 0.12), rgba(248, 244, 236, 0.82));
+    linear-gradient(90deg, rgba(248, 244, 236, 0.86), rgba(248, 244, 236, 0.58), rgba(248, 244, 236, 0.9)),
+    radial-gradient(circle at center, rgba(255, 255, 255, 0.04), rgba(248, 244, 236, 0.58));
 }
 
 .photo-bg-home::before {
@@ -55,6 +55,7 @@
 .photo-bg-contact::before {
   background-image: url("../images/ceremonies/CP2.jpg");
   background-position: center 42%;
+  opacity: 0.48;
 }
 
 .photo-bg-thank-you::before {
@@ -65,37 +66,41 @@
 .photo-bg-cta::before {
   background-image: url("../images/ceremonies/CP3.jpg");
   background-position: center 45%;
-  opacity: 0.2;
+  opacity: 0.44;
 }
 
 .cta-section.photo-bg::before {
-  opacity: 0.18;
-  filter: grayscale(22%) contrast(98%) saturate(75%);
+  opacity: 0.4;
+  filter: grayscale(10%) contrast(108%) saturate(95%);
 }
 
 .cta-section.photo-bg::after {
   background:
-    linear-gradient(90deg, rgba(31, 31, 31, 0.96), rgba(31, 31, 31, 0.82), rgba(31, 31, 31, 0.96)),
-    radial-gradient(circle at center, rgba(198, 161, 91, 0.18), rgba(31, 31, 31, 0.9));
+    linear-gradient(90deg, rgba(31, 31, 31, 0.9), rgba(31, 31, 31, 0.68), rgba(31, 31, 31, 0.9)),
+    radial-gradient(circle at center, rgba(198, 161, 91, 0.14), rgba(31, 31, 31, 0.72));
 }
 
 .services-hero-modern.photo-bg::after {
   background:
-    linear-gradient(90deg, rgba(248, 244, 236, 0.97), rgba(248, 244, 236, 0.83), rgba(248, 244, 236, 0.96)),
-    radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.18), rgba(248, 244, 236, 0.86));
+    linear-gradient(90deg, rgba(248, 244, 236, 0.9), rgba(248, 244, 236, 0.62), rgba(248, 244, 236, 0.88)),
+    radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.08), rgba(248, 244, 236, 0.68));
 }
 
 @media (max-width: 760px) {
   .photo-bg::before {
-    opacity: 0.13;
+    opacity: 0.32;
     transform: scale(1.04);
   }
 
   .photo-bg::after {
-    background: rgba(248, 244, 236, 0.9);
+    background: rgba(248, 244, 236, 0.78);
+  }
+
+  .cta-section.photo-bg::before {
+    opacity: 0.3;
   }
 
   .cta-section.photo-bg::after {
-    background: rgba(31, 31, 31, 0.92);
+    background: rgba(31, 31, 31, 0.82);
   }
 }
