@@ -780,16 +780,11 @@ p {
   background: var(--gold);
   color: var(--white) !important;
   min-width: 190px;
-  max-width: 220px;
+  max-width: 260px;
   padding: 12px 22px;
-  white-space: nowrap;
+  white-space: normal;
   text-align: center;
   line-height: 1.2;
-  font-size: 0;
-}
-
-.footer-button::after {
-  content: "Check Availability";
   font-size: 1rem;
 }
 
