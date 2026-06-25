@@ -59,9 +59,24 @@ document.addEventListener("DOMContentLoaded", function () {
         background: var(--white);
         border: 1px solid var(--line);
         border-radius: 18px;
+        height: 620px;
         min-height: 620px;
         overflow: hidden;
-        padding: 10px;
+        padding: 0;
+        position: relative;
+      }
+
+      .tidycal-embed {
+        height: 740px;
+        min-height: 740px;
+        margin-top: -116px;
+      }
+
+      .tidycal-embed iframe {
+        border: 0;
+        height: 740px !important;
+        min-height: 740px !important;
+        width: 100% !important;
       }
 
       .booking-fallback {
@@ -94,7 +109,19 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         .tidycal-embed-wrap {
+          height: 560px;
           min-height: 560px;
+        }
+
+        .tidycal-embed {
+          height: 680px;
+          min-height: 680px;
+          margin-top: -110px;
+        }
+
+        .tidycal-embed iframe {
+          height: 680px !important;
+          min-height: 680px !important;
         }
       }
     `;
