@@ -1,0 +1,101 @@
+/* Ceremony photo background system
+   Uses subtle image layers so photos add warmth without hurting readability. */
+
+.photo-bg {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.photo-bg > .container {
+  position: relative;
+  z-index: 2;
+}
+
+.photo-bg::before,
+.photo-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.photo-bg::before {
+  z-index: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.18;
+  filter: grayscale(18%) contrast(96%) saturate(85%);
+  transform: scale(1.02);
+}
+
+.photo-bg::after {
+  z-index: 1;
+  background:
+    linear-gradient(90deg, rgba(248, 244, 236, 0.96), rgba(248, 244, 236, 0.78), rgba(248, 244, 236, 0.96)),
+    radial-gradient(circle at center, rgba(255, 255, 255, 0.12), rgba(248, 244, 236, 0.82));
+}
+
+.photo-bg-home::before {
+  background-image: url("../images/ceremonies/BL1.JPG");
+  background-position: center 36%;
+}
+
+.photo-bg-services::before {
+  background-image: url("../images/ceremonies/BL2.JPG");
+  background-position: center 42%;
+}
+
+.photo-bg-styles::before {
+  background-image: url("../images/ceremonies/CP1.jpg");
+  background-position: center 44%;
+}
+
+.photo-bg-contact::before {
+  background-image: url("../images/ceremonies/CP2.jpg");
+  background-position: center 42%;
+}
+
+.photo-bg-thank-you::before {
+  background-image: url("../images/ceremonies/SM1.jpg");
+  background-position: center 42%;
+}
+
+.photo-bg-cta::before {
+  background-image: url("../images/ceremonies/CP3.jpg");
+  background-position: center 45%;
+  opacity: 0.2;
+}
+
+.cta-section.photo-bg::before {
+  opacity: 0.18;
+  filter: grayscale(22%) contrast(98%) saturate(75%);
+}
+
+.cta-section.photo-bg::after {
+  background:
+    linear-gradient(90deg, rgba(31, 31, 31, 0.96), rgba(31, 31, 31, 0.82), rgba(31, 31, 31, 0.96)),
+    radial-gradient(circle at center, rgba(198, 161, 91, 0.18), rgba(31, 31, 31, 0.9));
+}
+
+.services-hero-modern.photo-bg::after {
+  background:
+    linear-gradient(90deg, rgba(248, 244, 236, 0.97), rgba(248, 244, 236, 0.83), rgba(248, 244, 236, 0.96)),
+    radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.18), rgba(248, 244, 236, 0.86));
+}
+
+@media (max-width: 760px) {
+  .photo-bg::before {
+    opacity: 0.13;
+    transform: scale(1.04);
+  }
+
+  .photo-bg::after {
+    background: rgba(248, 244, 236, 0.9);
+  }
+
+  .cta-section.photo-bg::after {
+    background: rgba(31, 31, 31, 0.92);
+  }
+}
