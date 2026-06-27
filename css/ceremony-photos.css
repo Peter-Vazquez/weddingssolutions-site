@@ -434,6 +434,8 @@
   align-self: center;
   padding: 8px 0;
   max-width: 640px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .styles-band-copy h2 {
@@ -448,11 +450,12 @@
 }
 
 .styles-band-note {
-  margin-top: 22px;
-  padding: 18px 20px;
-  border-left: 4px solid var(--gold);
+  margin: 22px auto 0;
+  padding: 18px 22px;
+  border-top: 3px solid var(--gold);
   background: rgba(255, 255, 255, 0.78);
-  border-radius: 0 16px 16px 0;
+  border-radius: 18px;
+  max-width: 560px;
 }
 
 .styles-band-note p {
@@ -467,6 +470,7 @@
 .styles-style-tags {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 9px;
   margin-top: 22px;
 }
