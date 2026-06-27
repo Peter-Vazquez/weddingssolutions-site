@@ -391,3 +391,132 @@
     padding: 15px 16px;
   }
 }
+
+/* Ceremony Styles page visual band */
+
+.styles-ceremony-band {
+  padding: 76px 0;
+  background: var(--white);
+}
+
+.styles-band-card {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.78fr) minmax(0, 1.22fr);
+  gap: clamp(26px, 4vw, 52px);
+  align-items: center;
+  padding: clamp(24px, 4vw, 42px);
+  border: 1px solid var(--line);
+  border-radius: 32px;
+  background: var(--ivory);
+  box-shadow: 0 20px 50px rgba(31, 31, 31, 0.08);
+}
+
+.styles-band-image {
+  margin: 0;
+  border-radius: 24px;
+  overflow: hidden;
+  background: var(--charcoal);
+  box-shadow: 0 18px 40px rgba(31, 31, 31, 0.14);
+}
+
+.styles-band-image img {
+  display: block;
+  width: 100%;
+  max-height: 340px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.styles-band-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  padding: 8px 0;
+  max-width: 640px;
+}
+
+.styles-band-copy h2 {
+  margin-bottom: 14px;
+  line-height: 1.12;
+}
+
+.styles-band-copy p {
+  margin-bottom: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.styles-band-note {
+  margin-top: 22px;
+  padding: 18px 20px;
+  border-left: 4px solid var(--gold);
+  background: rgba(255, 255, 255, 0.78);
+  border-radius: 0 16px 16px 0;
+}
+
+.styles-band-note p {
+  margin: 0;
+  color: var(--charcoal);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.02rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.styles-style-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 22px;
+}
+
+.styles-style-tags span {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--charcoal);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .styles-band-card {
+    grid-template-columns: 1fr;
+  }
+
+  .styles-band-image {
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  .styles-band-image img {
+    max-height: none;
+    aspect-ratio: 16 / 10;
+  }
+}
+
+@media (max-width: 620px) {
+  .styles-ceremony-band {
+    padding: 52px 0;
+  }
+
+  .styles-band-card {
+    border-radius: 22px;
+  }
+
+  .styles-band-copy {
+    padding: 24px 20px;
+  }
+
+  .styles-band-note {
+    padding: 18px 18px;
+  }
+
+  .styles-band-note p {
+    font-size: 1rem;
+  }
+}
