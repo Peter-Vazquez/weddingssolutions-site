@@ -523,4 +523,118 @@
   .styles-band-note p {
     font-size: 1rem;
   }
+	
+/* Marriage License Guide page compact support card */
+
+.license-guide-strip {
+  padding: 34px 0 18px;
+  background: var(--white);
+}
+
+.license-strip-card {
+  display: grid;
+  grid-template-columns: 105px minmax(0, 1fr);
+  gap: 20px;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 18px 22px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--ivory);
+  box-shadow: 0 10px 24px rgba(31, 31, 31, 0.06);
+}
+
+.license-strip-image {
+  width: 105px;
+  height: 105px;
+  margin: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--charcoal);
+  box-shadow: 0 8px 18px rgba(31, 31, 31, 0.12);
+}
+
+.license-strip-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.license-strip-copy {
+  max-width: 720px;
+}
+
+.license-strip-copy h2 {
+  margin-bottom: 10px;
+  font-size: clamp(1.45rem, 2vw, 2rem);
+  line-height: 1.15;
+}
+
+.license-strip-copy p {
+  margin-bottom: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.license-strip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.license-strip-list li {
+  position: relative;
+  padding-left: 18px;
+  color: var(--charcoal);
+  font-size: 0.96rem;
+  line-height: 1.4;
+}
+
+.license-strip-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.58em;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--gold);
+}
+
+@media (max-width: 720px) {
+  .license-strip-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .license-strip-image {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+  }
+
+  .license-strip-list {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 520px) {
+  .license-guide-strip {
+    padding: 26px 0 10px;
+  }
+
+  .license-strip-card {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .license-strip-image {
+    width: 160px;
+  }
 }
