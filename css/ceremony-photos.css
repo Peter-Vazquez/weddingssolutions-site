@@ -612,3 +612,40 @@
     height: 116px;
   }
 }
+
+/* Shared top navigation simplification */
+
+.main-nav a[href="helpful-links.html"],
+.main-nav a[href="about.html"] {
+  display: none;
+}
+
+.main-nav a[href="services.html"],
+.main-nav a[href="ceremony-styles.html"],
+.main-nav a[href="marriage-license-guide.html"],
+.main-nav a.nav-button {
+  font-size: 0;
+}
+
+.main-nav a[href="services.html"]::after,
+.main-nav a[href="ceremony-styles.html"]::after,
+.main-nav a[href="marriage-license-guide.html"]::after,
+.main-nav a.nav-button::after {
+  font-size: 0.95rem;
+}
+
+.main-nav a[href="services.html"]::after {
+  content: "Services";
+}
+
+.main-nav a[href="ceremony-styles.html"]::after {
+  content: "Ceremony Options";
+}
+
+.main-nav a[href="marriage-license-guide.html"]::after {
+  content: "License Guide";
+}
+
+.main-nav a.nav-button::after {
+  content: "Schedule Consultation";
+}
