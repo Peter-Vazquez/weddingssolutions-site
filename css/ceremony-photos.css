@@ -238,17 +238,32 @@
   align-items: center;
 }
 
-.home-profile-mark {
+.home-profile-photo {
+  position: relative;
   width: 150px;
-  aspect-ratio: 1;
-  display: grid;
-  place-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  background: rgba(255, 255, 255, 0.05);
-  color: #d6bb84;
-  font-size: 2.6rem;
-  font-weight: 760;
-  letter-spacing: -0.06em;
+  margin: 0;
+  padding: 0 8px 8px 0;
+}
+
+.home-profile-photo::before {
+  content: "";
+  position: absolute;
+  inset: 12px 0 0 12px;
+  background: #d6bb84;
+  border-radius: 10px;
+}
+
+.home-profile-photo img {
+  position: relative;
+  z-index: 1;
+  width: 150px;
+  height: 188px;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 10px;
+  background: var(--white);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.22);
 }
 
 .home-profile-copy h2,
@@ -296,6 +311,62 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.16);
   color: rgba(255, 255, 255, 0.82);
   font-size: 0.94rem;
+}
+
+/* About portrait */
+
+.about-hero-profile {
+  padding: clamp(54px, 7vw, 78px) 0;
+}
+
+.about-hero-grid {
+  width: min(940px, 100%);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  gap: clamp(36px, 6vw, 72px);
+  align-items: center;
+}
+
+.about-hero-copy p:last-child {
+  max-width: 650px;
+  color: var(--muted);
+}
+
+.about-profile-photo {
+  position: relative;
+  width: 210px;
+  margin: 0;
+  padding: 0 10px 10px 0;
+}
+
+.about-profile-photo::before {
+  content: "";
+  position: absolute;
+  inset: 16px 0 0 16px;
+  background: var(--taupe);
+  border-radius: 12px;
+}
+
+.about-profile-photo img {
+  position: relative;
+  z-index: 1;
+  width: 210px;
+  height: 262px;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 12px;
+  background: var(--white);
+  box-shadow: 0 16px 36px rgba(23, 23, 23, 0.14);
+}
+
+.about-profile-photo figcaption {
+  position: relative;
+  z-index: 1;
+  margin: 9px 0 0 16px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.4;
 }
 
 .home-value-section {
@@ -742,14 +813,29 @@
   .home-value-grid,
   .home-license-grid,
   .home-area-grid,
+  .about-hero-grid,
   .services-image-card,
   .styles-band-card,
   .ceremony-moment-card {
     grid-template-columns: 1fr;
   }
 
-  .home-profile-mark {
-    width: 120px;
+  .home-profile-photo {
+    width: 132px;
+  }
+
+  .home-profile-photo img {
+    width: 132px;
+    height: 165px;
+  }
+
+  .about-profile-photo {
+    width: 190px;
+  }
+
+  .about-profile-photo img {
+    width: 190px;
+    height: 238px;
   }
 
   .home-hero-image {
