@@ -1,28 +1,35 @@
 /* Shared image and page presentation */
 
-.main-nav a[href="helpful-links.html"],
-.main-nav a[href="about.html"] {
+/* Five-choice primary navigation */
+.main-nav a[href="ceremony-styles.html"],
+.main-nav a[href="helpful-links.html"] {
   display: none;
 }
 
 .main-nav a[href="services.html"],
-.main-nav a[href="ceremony-styles.html"],
+.main-nav a[href="about.html"],
 .main-nav a[href="marriage-license-guide.html"],
 .main-nav a.nav-button {
   font-size: 0;
 }
 
 .main-nav a[href="services.html"]::after,
-.main-nav a[href="ceremony-styles.html"]::after,
+.main-nav a[href="about.html"]::after,
 .main-nav a[href="marriage-license-guide.html"]::after,
 .main-nav a.nav-button::after {
   font-size: 0.88rem;
 }
 
 .main-nav a[href="services.html"]::after { content: "Services"; }
-.main-nav a[href="ceremony-styles.html"]::after { content: "Ceremony Options"; }
+.main-nav a[href="about.html"]::after { content: "About Peter"; }
 .main-nav a[href="marriage-license-guide.html"]::after { content: "License Guide"; }
 .main-nav a.nav-button::after { content: "Schedule Consultation"; }
+
+.main-nav a[href="index.html"] { order: 1; }
+.main-nav a[href="services.html"] { order: 2; }
+.main-nav a[href="about.html"] { order: 3; }
+.main-nav a[href="marriage-license-guide.html"] { order: 4; }
+.main-nav a.nav-button { order: 5; }
 
 .page-hero {
   padding: clamp(54px, 7vw, 78px) 0;
@@ -214,6 +221,81 @@
 .home-section-link a {
   font-weight: 720;
   text-decoration: none;
+}
+
+/* Peter Vazquez profile */
+
+.home-profile-section {
+  padding: clamp(58px, 7vw, 84px) 0;
+  background: var(--charcoal);
+  color: var(--white);
+}
+
+.home-profile-grid {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1.15fr) minmax(240px, 0.85fr);
+  gap: clamp(28px, 5vw, 64px);
+  align-items: center;
+}
+
+.home-profile-mark {
+  width: 150px;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.05);
+  color: #d6bb84;
+  font-size: 2.6rem;
+  font-weight: 760;
+  letter-spacing: -0.06em;
+}
+
+.home-profile-copy h2,
+.home-profile-copy h3 {
+  color: var(--white);
+}
+
+.home-profile-copy h2 {
+  margin-bottom: 6px;
+}
+
+.home-profile-copy .profile-role {
+  margin-bottom: 18px;
+  color: #d6bb84;
+  font-size: 0.9rem;
+  font-weight: 720;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.home-profile-copy p {
+  max-width: 650px;
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.home-profile-copy .button-secondary {
+  border-color: rgba(255, 255, 255, 0.35);
+  color: var(--white);
+}
+
+.home-profile-copy .button-secondary:hover {
+  background: var(--white);
+  color: var(--charcoal);
+}
+
+.home-profile-points {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.home-profile-points li {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.94rem;
 }
 
 .home-value-section {
@@ -506,6 +588,122 @@
   color: var(--muted);
 }
 
+/* Simplified services presentation */
+
+.services-package-section,
+.services-ceremony-options,
+.services-faq-simple {
+  padding: clamp(60px, 7vw, 86px) 0;
+}
+
+.services-package-section,
+.services-faq-simple {
+  background: var(--surface);
+}
+
+.services-ceremony-options {
+  background: var(--white);
+}
+
+.services-package-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.services-package-card {
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--charcoal);
+  background: var(--white);
+}
+
+.services-package-card.featured {
+  border-top-color: var(--gold-dark);
+}
+
+.services-package-card h3 {
+  margin-bottom: 6px;
+  font-size: 1.35rem;
+}
+
+.services-package-card .package-price {
+  margin: 0 0 12px;
+  font-size: 1.45rem;
+}
+
+.services-package-card > p:not(.package-price) {
+  color: var(--muted);
+}
+
+.services-package-card ul {
+  margin: 18px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+.services-package-card li {
+  margin-bottom: 6px;
+}
+
+.services-options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--line-strong);
+}
+
+.services-option-item {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 14px;
+  padding: 20px 24px 20px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.services-option-item:nth-child(odd) {
+  padding-right: 34px;
+  border-right: 1px solid var(--line);
+}
+
+.services-option-item:nth-child(even) {
+  padding-left: 34px;
+}
+
+.services-option-number {
+  color: var(--gold-dark);
+  font-size: 0.78rem;
+  font-weight: 760;
+}
+
+.services-option-item h3 {
+  margin-bottom: 5px;
+}
+
+.services-option-item p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.services-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.services-faq-item {
+  padding: 22px 0;
+  border-top: 1px solid var(--line-strong);
+}
+
+.services-faq-item h3 {
+  margin-bottom: 8px;
+}
+
+.services-faq-item p {
+  margin: 0;
+  color: var(--muted);
+}
+
 /* Interior grids and cards */
 
 .style-card,
@@ -540,6 +738,7 @@
   .home-hero-grid,
   .home-intro-grid,
   .home-section-heading,
+  .home-profile-grid,
   .home-value-grid,
   .home-license-grid,
   .home-area-grid,
@@ -547,6 +746,10 @@
   .styles-band-card,
   .ceremony-moment-card {
     grid-template-columns: 1fr;
+  }
+
+  .home-profile-mark {
+    width: 120px;
   }
 
   .home-hero-image {
@@ -572,12 +775,16 @@
 
   .home-hero-modern,
   .home .services-preview,
+  .home-profile-section,
   .home-value-section,
   .home-license-strip,
   .home-service-area,
   .services-image-feature,
   .styles-ceremony-band,
-  .ceremony-moment-section {
+  .ceremony-moment-section,
+  .services-package-section,
+  .services-ceremony-options,
+  .services-faq-simple {
     padding: 48px 0;
   }
 
@@ -616,5 +823,18 @@
   .license-practical-image {
     width: 72px;
     height: 72px;
+  }
+
+  .services-package-grid,
+  .services-options-grid,
+  .services-faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-option-item,
+  .services-option-item:nth-child(odd),
+  .services-option-item:nth-child(even) {
+    padding: 18px 0;
+    border-right: 0;
   }
 }
