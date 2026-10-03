@@ -150,7 +150,8 @@
 }
 
 .contact-calendly-panel .calendly-inline-widget {
-  min-width: 320px;
+  width: 100%;
+  min-width: 0;
   height: 700px;
   background: var(--white);
 }
