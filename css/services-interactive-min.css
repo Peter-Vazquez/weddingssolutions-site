@@ -295,9 +295,4 @@
   .services-page .services-decision-cta {
     padding: 46px 0 42px;
   }
-
-  .services-cta-action::after {
-    width: 130px;
-    margin-top: 17px;
-  }
 }
