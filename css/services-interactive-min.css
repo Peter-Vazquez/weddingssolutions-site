@@ -1,1 +1,304 @@
-.services-hero-modern{padding:clamp(56px,7vw,82px) 0;background:var(--ivory);border-bottom:1px solid var(--line)}.services-hero-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(260px,.75fr);gap:clamp(36px,6vw,72px);align-items:center}.services-hero-copy h1{max-width:760px;font-size:clamp(2.5rem,4.8vw,4.4rem);line-height:1}.services-hero-copy p:not(.eyebrow){max-width:680px;color:var(--muted);font-size:1.05rem}.hero-feature-card{padding:26px;border:1px solid var(--line);border-radius:10px;background:var(--white);color:var(--charcoal);box-shadow:none}.hero-feature-card h2{font-size:1.65rem}.hero-feature-card p:not(.featured-label){color:var(--muted)}.hero-feature-card .button{width:100%}.ceremony-selector-section,.package-accordion-section,.modern-faq-section{padding:clamp(60px,7vw,84px) 0;background:var(--white)}.selector-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.selector-card{min-height:145px;display:grid;gap:7px;padding:20px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--charcoal);text-decoration:none;box-shadow:none;transition:.18s ease}.selector-card:hover{transform:translateY(-2px);border-color:var(--line-strong);background:var(--white)}.selector-card span{color:var(--gold-dark);font-size:.76rem;font-weight:760;letter-spacing:.08em}.selector-card strong{font-size:1.15rem;line-height:1.2}.selector-card small{color:var(--muted)}.selector-card-featured{border-color:var(--charcoal);background:var(--charcoal);color:var(--white)}.selector-card-featured small{color:rgba(255,255,255,.72)}.featured-package-section,.modern-addon-section{padding:clamp(62px,7vw,86px) 0;background:var(--surface)}.featured-package-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,.75fr);gap:clamp(34px,5vw,60px);padding:0;background:transparent}.featured-package-panel h2{font-size:clamp(2rem,3.5vw,3.1rem)}.featured-package-panel p:not(.eyebrow):not(.package-price),.package-accordion-intro p:not(.eyebrow){color:var(--muted)}.featured-includes-box{padding:24px;border:1px solid var(--line);border-radius:10px;background:var(--white)}.featured-includes-box li{margin-bottom:7px;color:var(--muted)}.package-accordion-layout{display:grid;grid-template-columns:minmax(220px,.42fr) minmax(0,1fr);gap:clamp(34px,5vw,58px);align-items:start}.package-accordion-intro{position:sticky;top:110px}.package-accordion-list{display:grid;border-top:1px solid var(--line-strong)}.package-detail{overflow:hidden;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;box-shadow:none}.package-detail summary{display:flex;justify-content:space-between;gap:18px;padding:21px 0;cursor:pointer}.package-detail summary strong{display:block;font-size:1.18rem}.package-detail summary small{display:block;margin-top:3px;color:var(--muted)}.package-detail summary b{color:var(--gold-dark);font-size:1.16rem;white-space:nowrap}.package-detail-body{padding:0 0 24px;border-top:0}.package-detail-body p,.package-detail-body li{color:var(--muted)}.package-detail-body ul{columns:2;column-gap:34px;padding-left:20px}.package-detail-body li{break-inside:avoid;margin-bottom:7px}.polished-addon-table{max-width:900px}.polished-addon-table .addon-row{grid-template-columns:1fr auto;background:var(--white)}@media(max-width:1000px){.services-hero-grid,.featured-package-panel,.package-accordion-layout{grid-template-columns:1fr}.package-accordion-intro{position:static}.selector-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-feature-card{max-width:520px}}@media(max-width:760px){.services-hero-modern,.ceremony-selector-section,.featured-package-section,.package-accordion-section,.modern-faq-section{padding:52px 0}.selector-grid{grid-template-columns:1fr}.hero-feature-card{padding:22px}.package-detail summary{padding:19px 0}.package-detail-body{padding-bottom:22px}.package-detail-body ul{columns:1}}
+/* Services page layout refinements */
+
+.services-page .services-hero {
+  padding: 46px 0 42px;
+  background: var(--ivory);
+  border-bottom: 1px solid var(--line);
+}
+
+.services-hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.72fr);
+  gap: clamp(44px, 7vw, 92px);
+  align-items: end;
+}
+
+.services-hero-title,
+.services-hero-intro {
+  min-width: 0;
+}
+
+.services-hero-title .eyebrow {
+  margin-bottom: 14px;
+}
+
+.services-hero-title h1 {
+  max-width: 720px;
+  margin: 0;
+  font-size: clamp(2.85rem, 4.8vw, 4.45rem);
+  line-height: 0.96;
+  letter-spacing: -0.045em;
+}
+
+.services-hero-intro {
+  max-width: 520px;
+  padding-bottom: 3px;
+}
+
+.services-hero-intro p {
+  margin: 0 0 22px;
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.65;
+}
+
+.services-hero-intro .button {
+  margin: 0;
+}
+
+/* Intro image section */
+
+.services-page .services-image-feature {
+  padding: 34px 0 42px;
+}
+
+.services-page .services-image-card {
+  grid-template-columns: minmax(210px, 255px) minmax(0, 1fr);
+  gap: clamp(30px, 5vw, 52px);
+  padding: 22px 0;
+}
+
+.services-page .services-image-frame {
+  width: min(100%, 245px);
+}
+
+.services-page .services-image-frame img {
+  max-height: 188px;
+}
+
+.services-page .services-image-copy h2 {
+  margin-bottom: 10px;
+  font-size: clamp(1.9rem, 3vw, 2.75rem);
+}
+
+.services-page .services-image-copy > p {
+  margin-bottom: 14px;
+}
+
+.services-page .services-image-points {
+  margin-top: 16px;
+  gap: 8px;
+}
+
+/* Shared section rhythm */
+
+.services-page .services-package-section,
+.services-page .services-ceremony-options,
+.services-page .addon-section,
+.services-page .services-faq-simple {
+  padding: 48px 0;
+}
+
+.services-page .services-package-section {
+  padding-top: 52px;
+}
+
+.services-page .services-faq-simple {
+  padding-top: 42px;
+  padding-bottom: 38px;
+}
+
+.services-page .section-heading {
+  margin-bottom: 26px;
+}
+
+.services-page .section-heading .eyebrow {
+  margin-bottom: 10px;
+}
+
+.services-page .section-heading h2 {
+  margin-bottom: 10px;
+}
+
+.services-page .section-heading p:last-child {
+  margin-bottom: 0;
+}
+
+/* Package cards */
+
+.services-page .services-package-grid {
+  gap: 16px;
+}
+
+.services-page .services-package-card {
+  padding: 22px 24px;
+}
+
+.services-page .services-package-card h3 {
+  margin-bottom: 5px;
+}
+
+.services-page .services-package-card .package-price {
+  margin-bottom: 10px;
+}
+
+.services-page .services-package-card > p:not(.package-price):not(.featured-label) {
+  margin-bottom: 12px;
+}
+
+.services-page .services-package-card ul {
+  margin-top: 14px;
+}
+
+.services-page .services-package-card li {
+  margin-bottom: 5px;
+}
+
+/* Ceremony options */
+
+.services-page .services-options-grid {
+  margin-top: 2px;
+}
+
+.services-page .services-option-item {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.services-page .services-option-item h3 {
+  margin-bottom: 4px;
+}
+
+/* Add-ons */
+
+.services-page .addon-section {
+  padding-top: 44px;
+  padding-bottom: 42px;
+}
+
+.services-page .addon-table {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.services-page .addon-row {
+  min-height: 48px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+
+/* FAQ */
+
+.services-page .services-faq-grid {
+  gap: 14px 22px;
+}
+
+.services-page .services-faq-item {
+  padding: 17px 0;
+}
+
+.services-page .services-faq-item h3 {
+  margin-bottom: 6px;
+}
+
+/* Decision CTA */
+
+.services-page .services-decision-cta {
+  padding: 54px 0 48px;
+}
+
+.services-page .services-decision-cta .container {
+  max-width: 820px;
+}
+
+.services-page .services-decision-cta .eyebrow {
+  margin-bottom: 12px;
+}
+
+.services-page .services-decision-cta h2 {
+  margin-bottom: 10px;
+}
+
+.services-page .services-decision-cta p {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.services-cta-action {
+  display: grid;
+  justify-items: center;
+  margin-top: 22px;
+}
+
+.services-cta-action::after {
+  content: "";
+  width: 160px;
+  height: 1px;
+  margin-top: 20px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(214, 187, 132, 0.35) 10%,
+    #d6bb84 35%,
+    #d6bb84 65%,
+    rgba(214, 187, 132, 0.35) 90%,
+    transparent 100%
+  );
+}
+
+.services-page .services-decision-cta .button {
+  margin: 0;
+}
+
+/* Desktop alignment safeguard */
+
+@media (min-width: 981px) {
+  .services-page .services-hero-layout {
+    width: min(1180px, calc(100% - 40px));
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 980px) {
+  .services-hero-layout,
+  .services-page .services-image-card {
+    grid-template-columns: 1fr;
+  }
+
+  .services-hero-layout {
+    gap: 24px;
+  }
+
+  .services-hero-intro {
+    max-width: 680px;
+  }
+
+  .services-page .services-image-frame {
+    width: min(100%, 290px);
+  }
+
+  .services-page .services-image-frame img {
+    max-height: 210px;
+  }
+}
+
+@media (max-width: 720px) {
+  .services-page .services-hero {
+    padding: 40px 0 36px;
+  }
+
+  .services-hero-title h1 {
+    font-size: clamp(2.45rem, 12vw, 3.35rem);
+  }
+
+  .services-page .services-image-feature {
+    padding: 30px 0 36px;
+  }
+
+  .services-page .services-package-section,
+  .services-page .services-ceremony-options,
+  .services-page .addon-section,
+  .services-page .services-faq-simple {
+    padding: 40px 0;
+  }
+
+  .services-page .services-decision-cta {
+    padding: 46px 0 42px;
+  }
+
+  .services-cta-action::after {
+    width: 130px;
+    margin-top: 17px;
+  }
+}
