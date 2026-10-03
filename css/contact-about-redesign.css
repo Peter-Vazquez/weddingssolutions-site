@@ -151,7 +151,7 @@
 
 .contact-calendly-panel .calendly-inline-widget {
   width: 100%;
-  min-width: 0;
+  min-width: 320px;
   height: 700px;
   background: var(--white);
 }
@@ -523,10 +523,6 @@
     grid-template-columns: 1fr;
   }
 
-  .contact-calendly-panel .calendly-inline-widget {
-    height: 760px;
-  }
-
   .contact-hero-fact {
     grid-template-columns: 1fr;
     gap: 3px;
@@ -552,5 +548,28 @@
 
   .about-profile-portrait img {
     height: 275px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-start-section .contact-calendly-grid {
+    width: 100%;
+  }
+
+  .contact-calendly-panel {
+    width: calc(100% + 24px);
+    margin-left: -12px;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+  }
+
+  .contact-calendly-heading {
+    padding: 20px 18px 16px;
+  }
+
+  .contact-calendly-panel .calendly-inline-widget {
+    width: 100%;
+    min-width: 320px;
   }
 }
