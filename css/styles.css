@@ -892,7 +892,7 @@ textarea:focus-visible {
   }
 
   .main-nav a {
-    min-height: 40px;
+    min-height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
